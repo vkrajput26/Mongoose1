@@ -14,6 +14,12 @@
     res.send(details)
   })
 
+  app.get("/Information",async (req,res)=>{
+    const result= await MongooseModel.find()
+    res.send(result)
+    
+  })
+   
   app.listen(8020,async ()=>{
     try{
         await connection
